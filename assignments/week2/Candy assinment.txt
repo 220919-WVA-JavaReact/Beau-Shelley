@@ -1,0 +1,41 @@
+create table inventory(
+"id_unm" int primary key,
+"name" varchar(35),
+"price" float,
+"description" varchar(55),
+"quantity" int
+)
+
+insert into inventory values ( 1001, 'Hershey Bar', 3.45, 'A small chocolate bar', 50);
+
+insert into inventory values ( 1002, 'Skittles', 3.05, 'A bag of ranibow colored candies', 100);
+insert into inventory values  ( 2003, 'Gummy Bears', 5.55, 'A large bag of chewy fruit-flavored bears', 48);
+insert into inventory values ( 2005, 'Sour Gummy Worms', 9.55, 'A vary large bag of gelatin worms', 20);
+insert into inventory values ( 3008, 'Lollipop', 2.25, 'A hard candy atop a stick', 268);
+insert into inventory values ( 9007, 'M&Ms', 1.95, 'A bag of small chocolate candies', 58);
+
+select * from inventory;
+
+update inventory set quantity = 48 where "id_unm" = 1001;
+
+select ("name", "price") from inventory i;
+
+update inventory set description = 'A very large, delicious bag of worms' where "id_unm" = 2005;
+
+update inventory set quantity = 100 where "id_unm" = 9007;
+
+update inventory set price = 2.50 where "id_unm" = 3008;
+
+create table employees(
+"ID" int,
+"name" varchar(35),
+"favorite_candy" int primary key
+)
+
+insert into employees values ( 4001, 'Willy Wonka', 2005);
+
+insert into employees values ( 4002, 'Milton Hershey', 1001);
+
+insert into employees values ( 4003, 'Franklin Mars', 9007);
+
+insert into employees values ( 4004, 'John Cadbury', NULL);
